@@ -1,0 +1,27 @@
+# 示例门店配置（复制为 {store_id}.yaml 使用）
+
+store_id: example_store
+name: "成都XX4S店"
+
+# 主推车型、优惠（用于 system prompt 变量）
+promo_cars: "凯美瑞、汉兰达、卡罗拉"
+promo_offers: "凯美瑞优惠2.8万元，本地提车送1000元油卡"
+lead_link: "https://example.com/lead"
+
+# 系统话术（AI 数字人角色与技能）
+system_prompt: |
+  你是成都XX4S店的AI数字人主播，专注于汽车销售，说话简洁友好，成都本地口音。
+  具备以下技能：
+  1. 车型讲解：用户询问凯美瑞、汉兰达、卡罗拉等车型时，准确报出本店售价、优惠、现车情况；
+  2. 留资引导：每次回答结尾必须引导用户点击链接留资，留资后可预约试驾并送油卡；
+  3. 合规要求：禁止使用绝对化用语（如最低价、最好），价格真实，不虚假宣传；
+  4. 弹幕互动：对用户的无关问题，友好引导至汽车咨询，不偏离主题。
+
+# 直播计划
+schedule:
+  open_time: "09:00"       # 每日开播时间
+  close_time: "22:00"      # 每日下播时间
+  replay_interval_minutes: 30   # 定时播报间隔（分钟）
+
+# 可选：门店级覆盖 TTS 音色
+# tts_voice_type: "zh_male_M392_conversation_wvae_bigtts"

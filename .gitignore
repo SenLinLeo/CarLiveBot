@@ -1,0 +1,16 @@
+# 关键配置与密钥（不提交）
+.env
+.env.*
+!.env.example
+configs/*.local.yaml
+configs/stores/*.local.yaml
+**/secrets*.yaml
+**/secrets*.yml
+
+# 构建与 IDE（仅忽略根目录可执行文件，不忽略 cmd/carlivebot 源码）
+*.exe
+/carlivebot
+/vendor/
+.idea/
+*.test
+coverage.out

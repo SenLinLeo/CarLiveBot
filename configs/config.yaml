@@ -1,0 +1,30 @@
+# CarLiveBot 默认配置（可被环境变量覆盖）
+
+server:
+  port: "8080"
+  config_path: "configs"
+
+ark:
+  chat_url: "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
+  model_id: "doubao-seed-2-0-lite-260215"
+  temperature: 0.2
+  max_tokens: 2048
+  stream: true
+  thinking_enabled: true
+
+tts:
+  wss_url: "wss://openspeech.bytedance.com/api/v3/tts/unidirectional/stream"
+  voice_type: "zh_female_cancan_mars_bigtts"
+  speed_ratio: 1.0
+  loudness_ratio: 1.0
+  encoding: "mp3"
+  model: "seed-tts-1.1"
+
+compliance:
+  label_text: "本直播由AI虚拟人提供服务"
+  forbidden_words_path: "configs/compliance/forbidden_words.txt"
+
+live:
+  replay_interval_minutes: 30
+  health_check_interval_seconds: 60
+  auto_reconnect_interval_seconds: 5
